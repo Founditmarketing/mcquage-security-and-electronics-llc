@@ -913,6 +913,27 @@ const modulaMetaVars = [];
 </script>
 <script id="modula-js" src="/wp-content/plugins/modula-best-grid-gallery/assets/js/front/jquery-modula.min51c9.js?ver=2.13.6"></script>
 	
-	</body>
+	<script id="founditmkt-form-lockdown-js">
+/* FOUNDITMKT-FORM-DISABLED — runtime hide enforcement */
+(function(){
+  function hide(){
+    document.querySelectorAll('.et_pb_contact_form_container, form.et_pb_contact_form').forEach(function(el){
+      el.style.setProperty('display','none','important');
+      el.setAttribute('hidden','');
+      el.setAttribute('aria-hidden','true');
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hide);
+  } else {
+    hide();
+  }
+  // run again after Divi's own JS may have toggled things
+  setTimeout(hide, 100);
+  setTimeout(hide, 500);
+  setTimeout(hide, 2000);
+})();
+</script>
+</body>
 
 </html>
