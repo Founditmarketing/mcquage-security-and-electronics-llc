@@ -665,9 +665,20 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				
 				<div class="et_pb_text_inner"><h2><span>Contact Us</span></h2></div>
 			</div>
-			<div class="founditmkt-call-cta" style="text-align:center;padding:40px 20px;background:#f8f8f8;border-radius:8px;margin:20px 0;">
+			<!-- FOUNDITMKT-FORM-DISABLED
+  Divi contact form below is INTENTIONALLY hidden. The Vercel deploy has no PHP
+  backend, so the form has no working submit handler. Until either:
+    (1) the boss's CRM connector code lands, OR
+    (2) Resend integration is wired (api/contact.js + RESEND_API_KEY env var),
+  visitors see the Call+Email CTA below instead.
+
+  To re-enable the form:
+    - Remove this comment block and the <div class="founditmkt-call-cta"> below
+    - Remove the inline `style="display:none"` from the et_pb_contact_form_container div
+-->
+<div class="founditmkt-call-cta" style="text-align:center;padding:40px 20px;background:#f8f8f8;border-radius:8px;margin:20px 0;">
   <h3 style="margin:0 0 12px;font-size:24px;">Get in touch</h3>
-  <p style="margin:0 0 24px;font-size:16px;color:#555;">Form coming back online soon — in the meantime, please reach us directly.</p>
+  <p style="margin:0 0 24px;font-size:16px;color:#555;">Our contact form is temporarily unavailable. Please reach us directly:</p>
   <a href="tel:+16016007055" style="display:inline-block;background:#0c71c3;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-size:18px;font-weight:600;margin:6px;">Call 601.600.7055</a>
   <a href="mailto:jimmie@msecurityandelectronics.com" style="display:inline-block;background:#0c71c3;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-size:18px;font-weight:600;margin:6px;">Email Us</a>
 </div><div id="et_pb_contact_form_0" class="et_pb_with_border et_pb_module et_pb_contact_form_0_tb_footer et_animated et_pb_recaptcha_enabled et_pb_contact_form_container clearfix" style="display:none" data-form_unique_num="0" data-form_unique_id="d3620120-0b2c-4e30-adee-0fec968a16e4">
@@ -679,7 +690,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="et-pb-contact-message"></div>
 				
 				<div class="et_pb_contact">
-					<form class="et_pb_contact_form clearfix" method="post" action="/privacy-policy/">
+					<form class="et_pb_contact_form clearfix" method="post" action="#">
 						<p class="et_pb_contact_field et_pb_contact_field_0_tb_footer et_pb_contact_field_half" data-id="name" data-type="input">
 				
 				
